@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<title>Loan Request Home</title>
+<link rel="stylesheet" type="text/css" href="/NSEP_System/CSS/style.css" />
+<script type="text/javascript" src="createLoanRequestFirstPage.js"></script>
+</head>
+
+<body onload="document.createfirstPage.studentId.focus()">
+<div id="main">
+<div id="header">
+<div id="logo">
+<div id="logo_text">
+<h1>NSEP<span class="alternate_colour"> System</span></h1>
+</div>
+</div>
+<div id="menubar">
+<ul id="menu">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">User Management</a></li>
+	<li><a href="#">Account Management</a></li>
+	<li class="tab_selected"><a
+		href="/NSEP_System/HTML/Loan_Management/LMHome.html">Loan
+	Management</a></li>
+</ul>
+</div>
+</div>
+<div id="site_content">
+<div class="sidebar">
+<table>
+	<tr>
+		<td id="menu_button"><a
+			href="/NSEP_System/HTML/Loan_Management/Loan_Request/LoanRequestHomePage.html">Loan
+		Request Home</a></td>
+	</tr>
+	<tr>
+		<td id="menu_button"><a
+			href="/NSEP_System/HTML/Loan_Management/Loan_Request/createLoanRequestFirstPage.html">Create
+		Loan Request</a></td>
+	</tr>
+	<tr>
+		<td id="menu_button"><a href="../../../LoanRequest?action=View" />View
+		Loan Request</a></td>
+	</tr>
+	<tr>
+		<td id="menu_button"><a
+			href="/NSEP_System/HTML/Loan_Management/Loan_Request/approveLoanRequest.jsp">Approve
+		Loan Request</a></td>
+	</tr>
+	<!--  <tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Request/updateLoanRequest.html"/>Update Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href/>Approve Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href/>Delete Loan Request</a></td></tr>
+-->
+</table>
+</div>
+
+<div id="content">
+<h1>Enter Student Id to Create Loan Request</h1>
+<form class="form_settings" action="..\..\..\LoanRequest" method="post"
+	onsubmit="return submitButton();" name="createfirstPage">
+<table>
+	<tr>
+		<td>Student Id</td>
+		<td><input type="text" name="studentId" id="studentId"
+			onfocus="changeColor(this)" onblur="changeBGcolor(this)"
+			maxlength="20" /></td>
+		<td><label id="stId"></label></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Search" class='submit' /></td>
+		<td><input type="reset" value="Reset"
+			onclick="return resetButton()" class='submit' /> <input type="hidden"
+			name="h_field" value="createFirstPage" /></td>
+	</tr>
+</table>
+</form>
+</div>
+
+<div id="site_content_bottom"></div>
+</div>
+<div id="footer">Copyright &copy; NSEP System. All Rights
+Reserved.</div>
+</div>
+</body>
+</html>

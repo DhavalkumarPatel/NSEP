@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Loan Request Home</title>
+  <link rel="stylesheet" type="text/css" href="/NSEP_System/CSS/style.css" />
+  <script type="text/javascript" src="updateLoanRequest.js"></script>
+</head>
+
+<body onLoad="document.updateLoanRequest.LoanId.focus();">
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+           <h1>NSEP<span class="alternate_colour"> System</span></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+		<li><a href="/NSEP_System/HTML/NSEPHome.html">Home</a></li>
+		<li><a href="/NSEP_System/HTML/User_Management/UserManagementhome.html">User Management</a></li>
+		<li><a href="/NSEP_System/HTML/Account_Management/AMHome.html">Account Management</a></li>
+		<li class="tab_selected"><a href="/NSEP_System/HTML/Loan_Management/LMHome.html">Loan Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+		<table>
+    			
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Request/createLoanRequestFirstPage.html">Create Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href="../../../LoanRequest?action=View"/>View Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Request/updateLoanRequest.html"/>Update Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href/>Approve Loan Request</a></td></tr>
+    			<tr><td id="menu_button"><a href/>Delete Loan Request</a></td></tr>
+       	</table>
+      </div>
+
+      <div id="content">
+        <h1>Update Request Home </h1>
+		<form action="../../../LoanRequest" method="post" onSubmit="return submitButton()" onReset="return resetButton()" class="form_settings" name="updateLoanRequest">
+			<table>
+			<tr>
+				<td>Loan Id</td>
+				<td><input type="text" name="LoanId" id="LoanId"
+				onfocus="changeColor(this)" onblur="changeBGcolor(this)"
+				maxlength="9"/></td>
+				<td><label id="LnId"></label></td>
+				</tr>
+				
+			<tr>
+				<td><input type="submit" value="Search" name="search" class="submit"/></td>
+				<td><input type="reset" value="Reset" name="reset" class="submit"/></td>
+			</tr>
+			</table>
+			<input type='hidden' name='update' value='update'>
+		</form>
+      </div>
+
+      <div id="site_content_bottom"></div>
+    </div>
+    <div id="footer">Copyright &copy; NSEP System. All Rights Reserved. </div>
+  </div>
+</body>
+</html>
+
+
+
+
+

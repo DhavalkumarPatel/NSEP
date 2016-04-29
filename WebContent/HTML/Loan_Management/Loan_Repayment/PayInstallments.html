@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Pay Installments</title>
+  <link rel="stylesheet" type="text/css" href="/NSEP_System/CSS/style.css" />
+  <script src="/NSEP_System/HTML/Loan_Management/Loan_Repayment/JavaScript/PayInstallments.js" language="javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/NSEP_System/CSS/CalendarControl.css"/>
+  <script src="/NSEP_System/JavaScript/CalendarControl.js" language="javascript"></script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+           <h1>NSEP<span class="alternate_colour"> System</span></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">User Management</a></li>
+		<li><a href="#">Account Management</a></li>
+		<li class="tab_selected"><a href="/NSEP_System/HTML/Loan_Management/LMHome.html">Loan Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+		<table>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Repayment/LR_Home.html">Loan Repayment Home</a></td></tr>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Repayment/PayInstallments.html">Pay Installments</a></td></tr>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Repayment/ViewInstallments.jsp">View Installments</a></td></tr>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Repayment/GenerateDefaulterList.html">Generate Defaulter List</a></td></tr>
+    			<tr><td id="menu_button"><a href="/NSEP_System/HTML/Loan_Management/Loan_Repayment/LoanRepaidCertificate.html">Loan Repaid Certificate</a></td></tr>
+    	</table>
+      </div>
+
+      <div id="content">
+        <h1>Pay Installments</h1>
+		<form action="../../../LoanRepayment" method="post" name="PayInstallment" class="form_settings">
+			<table>
+				<tr>
+					<td colspan="3"><label>All Fields Are Mandatory.</label></td>
+				</tr>
+				<tr>
+					<td>Loan Id</td>
+					<td><input type="text" name="txtLoanId"/></td>
+					<td><label id="lblLoanId"></label></td>		
+				</tr>
+				<tr>
+					<td>Student Id</td>
+					<td><input type="text" name="txtStudentId"/></td>
+					<td><label id="lblStudentId"></label></td>		
+				</tr>
+				<tr>
+					<td>Amount <img src="/NSEP_System/CSS/Images/rupeesymbol.png" height="10" width="10" style="padding-top:5px"/></td>
+					<td><input type="text" name="txtAmount"/></td>
+					<td><label id="lblAmount"></label></td>		
+				</tr>
+				<tr>
+					<td>Date</td>
+					<td><input type="text" name="txtRepaymentDate" readonly="readonly" onfocus="showCalendarControl(this)"/></td>
+					<td><label id="lblRepaymentDate"></label></td>		
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit" class="submit" onclick="return validation();"/></td>
+					<td colspan="2"><input type="reset" value="Reset" class="submit" onclick="return resetForm();"/></td>
+				</tr>
+			</table>
+			<input type="hidden" name="hidfield" value="PayInstallments"/>
+		</form>
+      </div>
+
+      <div id="site_content_bottom"></div>
+    </div>
+    <div id="footer"><b>NSEP System</b></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title>View Loan Request</title>
+<script type="text/javascript" src="viewLoanRequest.js"></script>
+</head>
+
+<body onLoad="document.viewLnRequest.LoanId.focus();" >
+<form action="LoanRequest" method="post" name="viewLnRequest">
+<h1>View Loan Request Details</h1>
+<table>
+	<!-- <tr>
+		<td>Loan Id:</td>
+		<td><input type="text" name="LoanId" id="LoanId" 
+		onfocus="changeColor(this)"	onblur="changeBGcolor(this)" maxlength="10"/></td>
+		<td><label id="LnId"></label></td>
+	</tr> -->
+	<tr>
+		<td><input type="submit" name="Search" value="View" /></td>
+		<!--   <td><input type="reset" name="Reset" value="Reset" 
+		onclick=resetButton() /></td> -->
+	</tr>
+	<tr>
+		<td><input type="button" name="close" value="    Exit    "
+			onClick=ExitButton() /></td>
+	</tr>
+</table>
+ <input type="hidden" name="h_field" value="viewRequest"></input>
+</form>
+</body>
+</html>

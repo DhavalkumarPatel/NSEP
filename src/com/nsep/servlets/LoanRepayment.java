@@ -1,0 +1,79 @@
+/**
+* It is a Loan Repayment Servlet that creates instance of loanRepaymentService
+* and has functions that calls the method of loanRepaymentService 
+* and performs business logic for request and response.
+* It is a controller used for request and response.
+      * @author   	:Dhaval Patel(537643),Arpan Jaiswal(537777)  
+      * @version  	:1.0    
+      * @Class 		:LoanRepayment
+      * @Creation 	:15-Dec-2011
+     * @ History	:
+*/
+
+package com.nsep.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.nsep.service.LoanRepaymentService;
+
+
+public class LoanRepayment extends HttpServlet {
+       
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4565499066774392247L;
+
+	public LoanRepayment() {
+        super();
+    }
+    
+    /**
+	 * This function is used for to identify the request and according to request it calls
+	 *  related service method for generating response. 
+	 * @param		:<HttpServletRequest><It is used to pass request from servlet received from client>
+	 * 				 <HttpServletResponse><It is used to give response to the client>
+	 * @return		:none
+	 * @exception 	:method throws ServletException, IOException
+	 * @since		:<JDK version 1.5>
+	 * @see			:LoanRepaymentService
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		String notifyAction=request.getParameter("hidfield");
+		LoanRepaymentService service=new LoanRepaymentService();
+		if(notifyAction.equals("PayInstallments"))
+		{	
+			service.payInstallments(request, response);
+		}
+		else if(notifyAction.equals("DeleteInstallments"))
+		{
+			service.deleteInstallments(request, response);
+		}
+		else if(notifyAction.equals("UpdateInstallments"))
+		{
+			service.updateInstallments(request, response);
+		}
+		else if(notifyAction.equals("EditInstallments"))
+		{
+			service.editInstallments(request, response);
+		}
+		else if(notifyAction.equals("ViewInstallments"))
+		{
+			service.searchInstallments(request, response);
+		}
+		else if(notifyAction.equals("LoanRepaidCertificate"))
+		{
+			service.generateLoanRepaidCertificate(request,response);
+		}
+		else if(notifyAction.equals("GenerateDefaulterList"))
+		{
+			service.generateDefaulterList(request,response);
+		}
+	}
+}

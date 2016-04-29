@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>NSEP_System</display-name>
+  <welcome-file-list>
+    <welcome-file>HTML/Loan_Management/LMHome.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>LoanRepayment</display-name>
+    <servlet-name>LoanRepayment</servlet-name>
+    <servlet-class>com.nsep.servlets.LoanRepayment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoanRepayment</servlet-name>
+    <url-pattern>/LoanRepayment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoanRequest</display-name>
+    <servlet-name>LoanRequest</servlet-name>
+    <servlet-class>com.nsep.servlets.LoanRequest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoanRequest</servlet-name>
+    <url-pattern>/LoanRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoanAccount</display-name>
+    <servlet-name>LoanAccount</servlet-name>
+    <servlet-class>com.nsep.servlets.LoanAccount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoanAccount</servlet-name>
+    <url-pattern>/LoanAccount</url-pattern>
+  </servlet-mapping>
+</web-app>
